@@ -35,7 +35,7 @@ export class ProductService {
 
     const products = await this.productRepository.find()
 
-    if(!products){
+    if(products.length == 0){
       throw new NotFoundException(`Table product is empty`)
     }
 
