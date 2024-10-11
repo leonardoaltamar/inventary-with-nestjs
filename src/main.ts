@@ -19,7 +19,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .setTitle('Inventary RESTful API')
-    .setDescription('Teslo shop endpoints')
+    .setDescription('inventary endpoints')
     .setVersion('1.0')
     .build();
     
