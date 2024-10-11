@@ -1,5 +1,5 @@
 import { Transform } from "class-transformer"
-import { IsDate, IsDecimal, IsInt, IsNotEmpty, IsNumber, IsOptional, IsPositive, IsString, MinLength } from "class-validator"
+import { IsDate, IsDecimal, IsInt, IsNotEmpty, IsNumber, IsOptional, IsPositive, IsString, Min, MinLength } from "class-validator"
 
 export class CreateProductDto {
 
@@ -13,9 +13,9 @@ export class CreateProductDto {
     @IsPositive()
     precio:number
 
-    @IsInt()
-    @IsPositive()
+    @IsInt()    
     @IsNotEmpty()
+    @Min(0)
     cantidad:number    
 
     @IsString()
